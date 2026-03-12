@@ -46,7 +46,7 @@ export default function Navbar() {
       >
         {/* Logo — always left-aligned */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", marginRight: "auto" }}>
-          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 80 }} className="nav-logo" />
+          <img src="/aisia-logo.png" alt="aisia.club" style={{ height: 80 }} className="nav-logo" />
         </Link>
 
         {/* Nav links — desktop */}
