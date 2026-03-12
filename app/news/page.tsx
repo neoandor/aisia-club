@@ -68,7 +68,11 @@ export default function News() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 24 }}>
             {filtered.map((a) => (
               <Link key={a.slug} href={`/news/${a.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
-                <div className="card" style={{ padding: 24, cursor: "pointer", height: "100%" }}>
+                <div className="card" style={{ cursor: "pointer", height: "100%", overflow: "hidden" }}>
+                  {a.image_url && (
+                    <div style={{ height: 180, backgroundImage: `url(${a.image_url})`, backgroundSize: "cover", backgroundPosition: "center" }} />
+                  )}
+                  <div style={{ padding: 24 }}>
                   <div style={{ display: "flex", gap: 6, marginBottom: 12, flexWrap: "wrap" }}>
                     <span className="pill">{a.category}</span>
                     {a.editors_pick && <span className="pill">Editor&apos;s Pick</span>}
@@ -83,6 +87,7 @@ export default function News() {
                     <span>{a.author}</span>
                     <span>·</span>
                     <span>{a.read_time}</span>
+                  </div>
                   </div>
                 </div>
               </Link>

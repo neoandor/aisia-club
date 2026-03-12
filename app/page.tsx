@@ -180,8 +180,8 @@ export default function Home() {
             {articles.map((a) => (
               <Link key={a.title} href={`/news/${a.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
               <div className="card" style={{ overflow: "hidden", cursor: "pointer", height: "100%" }}>
-                {/* Image placeholder */}
-                <div style={{ background: "#EEEBE6", height: 180 }} />
+                {/* Hero image */}
+                <div style={{ background: "#EEEBE6", height: 180, backgroundImage: `url(/article-hero-${a.slug}.jpg)`, backgroundSize: "cover", backgroundPosition: "center" }} />
                 <div style={{ padding: 24 }}>
                   <span className="pill" style={{ marginBottom: 12, display: "inline-block" }}>{a.category}</span>
                   <h3
