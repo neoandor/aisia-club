@@ -4,14 +4,15 @@
 :root {
   --bg: #FAFAF7;
   --card: #FFFFFF;
-  --violet: #6C5CE7;
+  --violet: #1A1A1A;
+  --terra: #D4845A;
   --coral: #FF6B6B;
   --text: #2D2D3A;
   --muted: #6B7280;
   --border: #E5E7EB;
   --card-shadow: rgba(0,0,0,0.04);
   --dark: #1A1A2E;
-  --violet-light: #F3F0FF;
+  --violet-light: #F5F0EC;
 }
 
 * {
@@ -88,7 +89,7 @@ a {
 }
 
 .btn-violet:hover {
-  background: #5a4bd1;
+  background: #D4845A;
   transform: translateY(-1px);
 }
 

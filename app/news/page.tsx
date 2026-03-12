@@ -24,7 +24,7 @@ export default function News() {
       {/* Header */}
       <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
         <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-          AI News for <span style={{ color: "#6C5CE7" }}>Southeast Asia</span>
+          AI News for <span style={{ color: "#D4845A" }}>Southeast Asia</span>
         </h1>
         <p style={{ color: "#6B7280", fontSize: "1rem", margin: 0 }}>
           Original reporting, regional lens. No hype.
@@ -41,9 +41,9 @@ export default function News() {
                 onClick={() => setActive(c)}
                 style={{
                   background: "transparent",
-                  color: active === c ? "#6C5CE7" : "#6B7280",
+                  color: active === c ? "#D4845A" : "#6B7280",
                   border: "none",
-                  borderBottom: active === c ? "2px solid #6C5CE7" : "2px solid transparent",
+                  borderBottom: active === c ? "2px solid #D4845A" : "2px solid transparent",
                   marginBottom: "-0.75rem",
                   padding: "0.45rem 0.9rem",
                   fontSize: "0.88rem",

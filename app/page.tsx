@@ -59,7 +59,7 @@ export default function Home() {
       {/* Hero */}
       <section
         style={{
-          background: "linear-gradient(135deg, #FAFAF7 0%, #F3F0FF 100%)",
+          background: "linear-gradient(135deg, #FAFAF7 0%, #F5F0EC 100%)",
           padding: "80px 1.5rem",
           textAlign: "center",
         }}
@@ -70,11 +70,11 @@ export default function Home() {
               display: "inline-flex",
               alignItems: "center",
               gap: "0.5rem",
-              background: "rgba(108,92,231,0.1)",
-              border: "1px solid rgba(108,92,231,0.25)",
+              background: "rgba(212,132,90,0.1)",
+              border: "1px solid rgba(212,132,90,0.3)",
               borderRadius: 999,
               padding: "0.35rem 1rem",
-              color: "#6C5CE7",
+              color: "#D4845A",
               fontSize: "0.8rem",
               fontWeight: 600,
               marginBottom: "1.5rem",
@@ -94,7 +94,7 @@ export default function Home() {
               letterSpacing: "-0.02em",
             }}
           >
-            Where <span style={{ color: "#6C5CE7" }}>AI</span> Meets{" "}
+            Where <span style={{ color: "#D4845A" }}>AI</span> Meets{" "}
             <span style={{ color: "#FF6B6B" }}>Asia</span>
           </h1>
 
@@ -168,7 +168,7 @@ export default function Home() {
             {valueProps.map((v) => (
               <div key={v.title} className="card" style={{ padding: 24 }}>
                 <div style={{ fontSize: "2.25rem", marginBottom: "0.75rem" }}>{v.emoji}</div>
-                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#6C5CE7", marginBottom: "0.5rem" }}>
+                <h3 style={{ fontSize: "1.15rem", fontWeight: 700, color: "#D4845A", marginBottom: "0.5rem" }}>
                   {v.title}
                 </h3>
                 <p style={{ color: "#6B7280", fontSize: "0.95rem", lineHeight: 1.65, margin: 0 }}>{v.desc}</p>
@@ -183,7 +183,7 @@ export default function Home() {
         <div className="container">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem", flexWrap: "wrap", gap: 12 }}>
             <h2 style={{ fontSize: "1.75rem", margin: 0, color: "#2D2D3A" }}>Latest News</h2>
-            <Link href="/news" style={{ color: "#6C5CE7", fontWeight: 600, fontSize: "0.95rem" }}>
+            <Link href="/news" style={{ color: "#D4845A", fontWeight: 600, fontSize: "0.95rem" }}>
               View all news →
             </Link>
           </div>
@@ -236,7 +236,7 @@ export default function Home() {
       </section>
 
       {/* Email signup */}
-      <section style={{ background: "#F3F0FF", padding: "80px 1.5rem" }}>
+      <section style={{ background: "#F5F0EC", padding: "80px 1.5rem" }}>
         <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
           <h2 style={{ fontSize: "1.75rem", fontWeight: 700, marginBottom: "0.75rem", color: "#2D2D3A" }}>
             Stay in the loop

@@ -39,7 +39,7 @@ export default function Sponsors() {
       <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-            Partner with <span style={{ color: "#6C5CE7" }}>AISIA Club</span>
+            Partner with <span style={{ color: "#D4845A" }}>AISIA Club</span>
           </h1>
           <p style={{ color: "#6B7280", fontSize: "1.05rem", lineHeight: 1.7, margin: "0 0 1.5rem" }}>
             Reach Malaysia&apos;s most engaged AI audience. From SMEs to Fortune 500s, our community is full of decision-makers curious about AI.
@@ -47,7 +47,7 @@ export default function Sponsors() {
           <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
             {[{ n: "500+", l: "Community Members" }, { n: "50+", l: "Published Articles" }, { n: "10+", l: "Events Planned" }].map((s) => (
               <div key={s.l} style={{ textAlign: "center" }}>
-                <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#6C5CE7" }}>{s.n}</div>
+                <div style={{ fontSize: "1.5rem", fontWeight: 700, color: "#D4845A" }}>{s.n}</div>
                 <div style={{ color: "#6B7280", fontSize: "0.82rem" }}>{s.l}</div>
               </div>
             ))}
@@ -65,7 +65,7 @@ export default function Sponsors() {
             {packages.map((p) => (
               <div key={p.name} className="card" style={{ padding: 24 }}>
                 <div style={{ fontSize: "2rem", marginBottom: 12 }}>{p.icon}</div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#6C5CE7", margin: "0 0 10px" }}>{p.name}</h3>
+                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#D4845A", margin: "0 0 10px" }}>{p.name}</h3>
                 <p style={{ color: "#6B7280", fontSize: "0.88rem", lineHeight: 1.65, marginBottom: 16 }}>{p.desc}</p>
                 <ul style={{ margin: 0, padding: "0 0 0 1.1rem", color: "#6B7280", fontSize: "0.85rem", lineHeight: 2 }}>
                   {p.perks.map((pk) => (

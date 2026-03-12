@@ -42,7 +42,7 @@ export default function Events() {
       <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-            AISIA <span style={{ color: "#6C5CE7" }}>Events</span>
+            AISIA <span style={{ color: "#D4845A" }}>Events</span>
           </h1>
           <p style={{ color: "#6B7280", fontSize: "1.05rem", lineHeight: 1.7, margin: 0 }}>
             Meetups, workshops, and fireside chats — bringing the AI community together across Malaysia.
@@ -63,7 +63,7 @@ export default function Events() {
                 <div style={{
                   minWidth: 64,
                   height: 64,
-                  background: "#6C5CE7",
+                  background: "#D4845A",
                   borderRadius: "50%",
                   display: "flex",
                   flexDirection: "column",

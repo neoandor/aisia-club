@@ -12,7 +12,7 @@ export default function Community() {
       <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
         <div style={{ maxWidth: 660, margin: "0 auto" }}>
           <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-            The AISIA <span style={{ color: "#6C5CE7" }}>Community</span>
+            The AISIA <span style={{ color: "#D4845A" }}>Community</span>
           </h1>
           <p style={{ color: "#6B7280", fontSize: "1.05rem", lineHeight: 1.7, margin: 0 }}>
             500+ members strong. Practitioners, founders, students, and AI enthusiasts from across Malaysia and Southeast Asia.
@@ -26,7 +26,7 @@ export default function Community() {
           <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
             {[
               { dot: "#22C55E", text: "🟢 Active community — 50+ messages today" },
-              { dot: "#6C5CE7", text: "🎉 New members joined this week" },
+              { dot: "#D4845A", text: "🎉 New members joined this week" },
               { dot: "#FF6B6B", text: "📅 Next event: KL AI Meetup — Feb 2026" },
             ].map((s) => (
               <span key={s.text} style={{ color: "#6B7280", fontSize: "0.88rem" }}>{s.text}</span>
@@ -57,8 +57,8 @@ export default function Community() {
                     display: "inline-block",
                     padding: "0.55rem 1.25rem",
                     borderRadius: 8,
-                    border: "1.5px solid #6C5CE7",
-                    color: "#6C5CE7",
+                    border: "1.5px solid #D4845A",
+                    color: "#D4845A",
                     fontWeight: 600,
                     fontSize: "0.9rem",
                     fontFamily: "Inter, sans-serif",
@@ -88,7 +88,7 @@ export default function Community() {
             ].map((b) => (
               <div key={b.title} className="card" style={{ padding: 24, textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{b.icon}</div>
-                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#6C5CE7", margin: "0 0 8px" }}>{b.title}</h3>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#D4845A", margin: "0 0 8px" }}>{b.title}</h3>
                 <p style={{ color: "#6B7280", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{b.desc}</p>
               </div>
             ))}

@@ -48,7 +48,7 @@ export default function Navbar() {
       >
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 36 }} />
+          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 72 }} />
         </Link>
 
         {/* Nav links — desktop */}
@@ -64,8 +64,8 @@ export default function Navbar() {
                 fontFamily: "Inter, sans-serif",
                 fontSize: "0.9rem",
                 fontWeight: 500,
-                color: pathname === l.href ? "#6C5CE7" : "#2D2D3A",
-                borderBottom: pathname === l.href ? "2px solid #6C5CE7" : "2px solid transparent",
+                color: pathname === l.href ? "#1A1A1A" : "#2D2D3A",
+                borderBottom: pathname === l.href ? "2px solid #1A1A1A" : "2px solid transparent",
                 transition: "color 0.15s",
                 textDecoration: "none",
               }}
