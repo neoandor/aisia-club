@@ -1,6 +1,7 @@
 "use client";
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect, useCallback, lazy, Suspense } from "react";
 import { supabase, DbArticle } from "@/lib/supabase";
+const RichEditor = lazy(() => import("@/components/RichEditor"));
 
 const ADMIN_PASS = "aisia2026";
 const CATEGORIES = ["Malaysia AI", "SEA Spotlight", "Tools & Reviews", "Deep Dives", "Interviews", "Opinion"];
@@ -148,18 +149,16 @@ export default function AdminPage() {
             />
           </label>
 
-          {/* Body (HTML) */}
-          <label style={{ display: "block", marginBottom: 24 }}>
-            <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#6B6B6B", display: "block", marginBottom: 4 }}>
-              Body (HTML — use &lt;h2&gt;, &lt;p&gt;, &lt;ul&gt;&lt;li&gt; tags)
-            </span>
-            <textarea
-              value={editing.body || ""}
-              onChange={(e) => setEditing({ ...editing, body: e.target.value })}
-              rows={15}
-              style={{ width: "100%", padding: "10px 14px", border: "1px solid #E5E5E0", borderRadius: 8, fontSize: "0.9rem", fontFamily: "monospace", resize: "vertical", boxSizing: "border-box" }}
-            />
-          </label>
+          {/* Body (Rich Editor) */}
+          <div style={{ marginBottom: 24 }}>
+            <span style={{ fontSize: "0.85rem", fontWeight: 600, color: "#6B6B6B", display: "block", marginBottom: 8 }}>Body</span>
+            <Suspense fallback={<div style={{ padding: 20, color: "#6B6B6B" }}>Loading editor...</div>}>
+              <RichEditor
+                content={editing.body || ""}
+                onChange={(html) => setEditing({ ...editing, body: html })}
+              />
+            </Suspense>
+          </div>
 
           {/* Actions */}
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
