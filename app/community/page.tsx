@@ -56,14 +56,14 @@ export default function Community() {
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 900, margin: "0 auto" }}>
             {[
-              { icon: "💬", topic: "General", desc: "Open chat — introductions, random AI thoughts, community vibes" },
-              { icon: "🔧", topic: "AI Tools & Reviews", desc: "Share and discuss tools you're using — ChatGPT, Canva AI, Copilot, local tools" },
-              { icon: "❓", topic: "Ask Anything", desc: "No stupid questions. Get help from the community on AI topics, career, tech" },
-              { icon: "📰", topic: "News & Articles", desc: "Discuss AISIA articles, share external news, debate AI developments" },
-              { icon: "💼", topic: "Jobs & Hiring", desc: "Post AI job openings, freelance gigs, and career opportunities in Malaysia & SEA" },
-              { icon: "🚀", topic: "Projects & Showcase", desc: "Show what you're building — get feedback, find collaborators, launch together" },
-              { icon: "📚", topic: "Learning & Resources", desc: "Courses, tutorials, papers, and study groups for levelling up your AI skills" },
-              { icon: "🗳️", topic: "Weekly Discussion", desc: "Curated weekly topic — community polls, debates, and themed conversations" },
+              { icon: "/icon-general.png", topic: "General", desc: "Open chat — introductions, random AI thoughts, community vibes" },
+              { icon: "/icon-tools.png", topic: "AI Tools & Reviews", desc: "Share and discuss tools you're using — ChatGPT, Canva AI, Copilot, local tools" },
+              { icon: "/icon-ask.png", topic: "Ask Anything", desc: "No stupid questions. Get help from the community on AI topics, career, tech" },
+              { icon: "/icon-news.png", topic: "News & Articles", desc: "Discuss AISIA articles, share external news, debate AI developments" },
+              { icon: "/icon-jobs.png", topic: "Jobs & Hiring", desc: "Post AI job openings, freelance gigs, and career opportunities in Malaysia & SEA" },
+              { icon: "/icon-projects.png", topic: "Projects & Showcase", desc: "Show what you're building — get feedback, find collaborators, launch together" },
+              { icon: "/icon-learning.png", topic: "Learning & Resources", desc: "Courses, tutorials, papers, and study groups for levelling up your AI skills" },
+              { icon: "/icon-weekly.png", topic: "Weekly Discussion", desc: "Curated weekly topic — community polls, debates, and themed conversations" },
             ].map((t) => (
               <div key={t.topic} style={{
                 border: "1px solid #E5E5E0",
@@ -74,7 +74,7 @@ export default function Community() {
                 alignItems: "flex-start",
                 transition: "box-shadow 0.15s",
               }}>
-                <span style={{ fontSize: "1.5rem", flexShrink: 0, marginTop: 2 }}>{t.icon}</span>
+                <img src={t.icon} alt={t.topic} style={{ width: 32, height: 32, flexShrink: 0, marginTop: 2 }} />
                 <div>
                   <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 4px" }}>#{t.topic}</h3>
                   <p style={{ color: "#6B6B6B", fontSize: "0.82rem", lineHeight: 1.55, margin: 0 }}>{t.desc}</p>
