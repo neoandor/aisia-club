@@ -119,11 +119,11 @@ export default function Navbar() {
       </div>
 
       <style>{`
-        .nav-logo { height: 56px; }
+        .nav-logo { height: 28px; }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-nav { display: flex !important; }
-          .nav-logo { height: 39px; }
+          .nav-logo { height: 24px; }
         }
       `}</style>
     </nav>
