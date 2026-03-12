@@ -252,7 +252,7 @@ export default function Home() {
             {valueProps.map((v) => (
               <div key={v.title} style={{ textAlign: "center" }}>
                 <div style={{ marginBottom: "1rem", display: "flex", justifyContent: "center" }}>
-                  <img src={v.iconSrc} alt={v.title} style={{ height: 64, width: "auto" }} />
+                  <img src={v.iconSrc} alt={v.title} style={{ height: 77, width: "auto" }} />
                 </div>
                 <h3
                   style={{
