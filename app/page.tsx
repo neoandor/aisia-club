@@ -40,17 +40,17 @@ const allCategories = ["All", "Malaysia AI", "Tools & Reviews", "SEA Spotlight",
 
 const valueProps = [
   {
-    icon: "◈",
+    iconSrc: "/icon-learn.svg",
     title: "Learn",
     desc: "Original AI reporting written for Malaysia and Southeast Asia. No jargon, no hype — just clear, useful intelligence.",
   },
   {
-    icon: "◎",
+    iconSrc: "/icon-connect.svg",
     title: "Connect",
     desc: "Join a growing community of practitioners, founders, and enthusiasts. Real people, real conversations.",
   },
   {
-    icon: "◇",
+    iconSrc: "/icon-build.svg",
     title: "Build",
     desc: "From hackathons to workshops — we create spaces to collaborate and ship AI projects together.",
   },
@@ -251,15 +251,8 @@ export default function Home() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 48 }}>
             {valueProps.map((v) => (
               <div key={v.title} style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    marginBottom: "1rem",
-                    color: "#1A1A1A",
-                    fontFamily: "monospace",
-                  }}
-                >
-                  {v.icon}
+                <div style={{ marginBottom: "1rem" }}>
+                  <img src={v.iconSrc} alt={v.title} style={{ height: 64, width: "auto" }} />
                 </div>
                 <h3
                   style={{
