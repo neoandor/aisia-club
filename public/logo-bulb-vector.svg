@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 80" width="420" height="80">
+  <!-- aisia.club — lightbulb + serif text (Vincent's final direction) -->
+  
+  <!-- Lightbulb icon (positioned left, slightly above text baseline) -->
+  <g transform="translate(32, 18)">
+    <!-- Bulb circle -->
+    <circle cx="0" cy="0" r="16" fill="none" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Neck/base (two sides tapering down from circle) -->
+    <line x1="-7" y1="14" x2="-5" y2="22" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round"/>
+    <line x1="7" y1="14" x2="5" y2="22" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round"/>
+    
+    <!-- Screw lines at base -->
+    <line x1="-5" y1="24" x2="5" y2="24" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-4" y1="28" x2="4" y2="28" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-3" y1="32" x2="3" y2="32" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+    
+    <!-- Spark rays (5 lines fanning above bulb) -->
+    <line x1="0" y1="-22" x2="0" y2="-30" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-9" y1="-20" x2="-14" y2="-27" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="9" y1="-20" x2="14" y2="-27" stroke="#1A1A1A" stroke-width="3.5" stroke-linecap="round"/>
+    <line x1="-16" y1="-14" x2="-22" y2="-18" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+    <line x1="16" y1="-14" x2="22" y2="-18" stroke="#1A1A1A" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- aisia.club text — bold serif -->
+  <text x="72" y="52" font-family="'Playfair Display', 'DM Serif Display', 'Source Serif 4', Georgia, 'Times New Roman', serif" font-size="48" font-weight="700" fill="#1A1A1A" letter-spacing="0.5">aisia.club</text>
+</svg>

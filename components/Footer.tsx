@@ -8,7 +8,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ marginBottom: 12 }}>
-              <img src="/logo-final-full-white.svg" alt="aisia.club" style={{ height: 30 }} />
+              <img src="/aisia-logo-white.svg" alt="aisia.club" style={{ height: 36 }} />
             </div>
             <p style={{ color: "#9CA3AF", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>
               Southeast Asia&apos;s open community for artificial intelligence. Malaysia-first, region-proud.
