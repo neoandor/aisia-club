@@ -27,7 +27,6 @@ export default function Community() {
             {[
               { dot: "#22C55E", text: "🟢 Active community — 50+ messages today" },
               { dot: "#1A1A1A", text: "🎉 New members joined this week" },
-              { dot: "#1A1A1A", text: "📅 Next event: KL AI Meetup — Feb 2026" },
             ].map((s) => (
               <span key={s.text} style={{ color: "#6B6B6B", fontSize: "0.88rem" }}>{s.text}</span>
             ))}

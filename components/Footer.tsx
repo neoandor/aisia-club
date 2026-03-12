@@ -20,7 +20,7 @@ export default function Footer() {
             <div style={{ fontWeight: 600, fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.07em", color: "#1A1A1A", marginBottom: 16, fontFamily: "'Inter', system-ui, sans-serif" }}>Explore</div>
             {[
               { href: "/news", label: "News" },
-              { href: "/events", label: "Events" },
+              /* { href: "/events", label: "Events" }, */
               { href: "/community", label: "Community" },
               { href: "/about", label: "About" },
             ].map((l) => (
