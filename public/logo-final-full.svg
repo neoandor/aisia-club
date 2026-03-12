@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 60" width="380" height="60">
+  <!-- aisia.club - Full Logo (Vincent's design) -->
+  <!-- Hexagon icon -->
+  <g transform="translate(30,30) scale(0.28)">
+    <polygon points="50,8 88,28 88,72 50,92 12,72 12,28" fill="none" stroke="#2D2D2D" stroke-width="5.5" stroke-linejoin="round"/>
+    <circle cx="50" cy="50" r="8.5" fill="#2D2D2D"/>
+  </g>
+  <!-- aisia.club text -->
+  <text x="62" y="38" font-family="'Nunito Sans', 'Nunito', 'Inter', sans-serif" font-size="30" font-weight="400" fill="#2D2D2D" letter-spacing="1.5">aisia.club</text>
+</svg>

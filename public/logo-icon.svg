@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- AISIA Club - Hexagon + Dot Icon -->
+  <polygon points="50,5 93,27.5 93,72.5 50,95 7,72.5 7,27.5" fill="none" stroke="#6C5CE7" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="50" cy="50" r="6" fill="#FF6B6B"/>
+</svg>
