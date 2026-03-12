@@ -1,40 +1,10 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { articles as allArticles } from "@/lib/articles";
 
-const heroArticle = {
-  category: "Malaysia AI",
-  title: "Malaysia's National AI Roadmap 2030 — What It Means for You",
-  excerpt:
-    "The government has unveiled an ambitious AI roadmap. Here's a plain-English breakdown of what's changing and how it affects businesses and professionals across the region.",
-  date: "Jan 2026",
-  author: "AISIA Editorial",
-  readTime: "6 min read",
-};
-
-const articles = [
-  {
-    category: "Tools & Reviews",
-    title: "Top 5 AI Tools Malaysian SMEs Are Actually Using",
-    excerpt: "From automated customer service to financial forecasting — we surveyed 50 local SME owners.",
-    date: "Jan 2026",
-    readTime: "4 min read",
-  },
-  {
-    category: "SEA Spotlight",
-    title: "SEA's AI Startup Scene: The Founders Leading the Charge",
-    excerpt: "Meet the Southeast Asian founders building the next generation of AI-native companies.",
-    date: "Jan 2026",
-    readTime: "5 min read",
-  },
-  {
-    category: "Deep Dives",
-    title: "ChatGPT vs Gemini vs Claude — Which One for Malaysian Business?",
-    excerpt: "A practical, no-nonsense comparison tested against real Malaysian business use cases.",
-    date: "Jan 2026",
-    readTime: "8 min read",
-  },
-];
+const heroArticle = allArticles[0];
+const articles = allArticles.slice(1, 4);
 
 const allCategories = ["All", "Malaysia AI", "Tools & Reviews", "SEA Spotlight", "Editor's Pick"];
 
@@ -102,6 +72,7 @@ export default function Home() {
       {/* Featured Article */}
       <section style={{ background: "#F5F0EB", padding: "0 1.5rem 80px" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+          <Link href={`/news/${heroArticle.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
           <div
             className="card"
             style={{
@@ -110,6 +81,7 @@ export default function Home() {
               gap: 0,
               overflow: "hidden",
               borderRadius: 16,
+              cursor: "pointer",
             }}
           >
             {/* Image placeholder */}
@@ -150,6 +122,7 @@ export default function Home() {
               </div>
             </div>
           </div>
+          </Link>
         </div>
 
         <style>{`
@@ -200,7 +173,8 @@ export default function Home() {
           {/* Card grid */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))", gap: 24 }}>
             {articles.map((a) => (
-              <div key={a.title} className="card" style={{ overflow: "hidden" }}>
+              <Link key={a.title} href={`/news/${a.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <div className="card" style={{ overflow: "hidden", cursor: "pointer", height: "100%" }}>
                 {/* Image placeholder */}
                 <div style={{ background: "#EEEBE6", height: 180 }} />
                 <div style={{ padding: 24 }}>
@@ -225,6 +199,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+              </Link>
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: 40 }}>
