@@ -40,17 +40,17 @@ const allCategories = ["All", "Malaysia AI", "Tools & Reviews", "SEA Spotlight",
 
 const valueProps = [
   {
-    iconSrc: "/icon-learn.svg",
+    iconSrc: "/icon-learn.png",
     title: "Learn",
     desc: "Original AI reporting written for Malaysia and Southeast Asia. No jargon, no hype — just clear, useful intelligence.",
   },
   {
-    iconSrc: "/icon-connect.svg",
+    iconSrc: "/icon-connect.png",
     title: "Connect",
     desc: "Join a growing community of practitioners, founders, and enthusiasts. Real people, real conversations.",
   },
   {
-    iconSrc: "/icon-build.svg",
+    iconSrc: "/icon-build.png",
     title: "Build",
     desc: "From hackathons to workshops — we create spaces to collaborate and ship AI projects together.",
   },
