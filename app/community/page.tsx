@@ -120,8 +120,8 @@ export default function Community() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, maxWidth: 700, margin: "0 auto" }}>
             {[
-              { icon: "📱", name: "WhatsApp Community", desc: "Weekly digest and casual Q&A for those who live on WhatsApp.", href: "#", cta: "Join WhatsApp →" },
-              { icon: "💼", name: "LinkedIn", desc: "Professional updates, job postings, and thought leadership.", href: "#", cta: "Follow on LinkedIn →" },
+              { icon: "📸", name: "Instagram", desc: "AI tips, community highlights, and visual content for the scroll.", href: "https://instagram.com/aisiaclub", cta: "Follow on Instagram →" },
+              { icon: "𝕏", name: "X (Twitter)", desc: "Real-time AI news, threads, and conversations with the global AI community.", href: "https://x.com/aisiaclub", cta: "Follow on X →" },
             ].map((ch) => (
               <a key={ch.name} href={ch.href} target="_blank" rel="noopener noreferrer" style={{
                 border: "1px solid #E5E5E0",
