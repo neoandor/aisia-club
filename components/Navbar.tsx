@@ -44,9 +44,9 @@ export default function Navbar() {
           height: 80,
         }}
       >
-        {/* Logo */}
-        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 144 }} />
+        {/* Logo — always left-aligned */}
+        <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", marginRight: "auto" }}>
+          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 80 }} className="nav-logo" />
         </Link>
 
         {/* Nav links — desktop */}
@@ -119,9 +119,11 @@ export default function Navbar() {
       </div>
 
       <style>{`
+        .nav-logo { height: 80px; }
         @media (max-width: 768px) {
           .desktop-nav { display: none !important; }
           .mobile-nav { display: flex !important; }
+          .nav-logo { height: 56px; }
         }
       `}</style>
     </nav>
