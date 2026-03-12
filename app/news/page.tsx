@@ -38,23 +38,24 @@ export default function News() {
 
       <section style={{ padding: "40px 1.5rem 80px", background: "#F5F0EB" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
-          <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "2rem", borderBottom: "2px solid #E5E5E0", paddingBottom: "0.75rem" }}>
+          <div style={{ display: "flex", gap: "0.5rem", marginBottom: "2rem", overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none", paddingBottom: 4 }} className="category-tabs">
             {categories.map((c) => (
               <button
                 key={c}
                 onClick={() => setActive(c)}
                 style={{
-                  background: "transparent",
-                  color: active === c ? "#1A1A1A" : "#6B6B6B",
-                  border: "none",
-                  borderBottom: active === c ? "2px solid #1A1A1A" : "2px solid transparent",
-                  marginBottom: "-0.75rem",
-                  padding: "0.45rem 0.9rem",
-                  fontSize: "0.88rem",
+                  background: active === c ? "#1A1A1A" : "transparent",
+                  color: active === c ? "#FFFFFF" : "#6B6B6B",
+                  border: active === c ? "none" : "1px solid #D5D5D0",
+                  borderRadius: 999,
+                  padding: "0.4rem 1rem",
+                  fontSize: "0.82rem",
                   fontWeight: active === c ? 600 : 500,
                   cursor: "pointer",
-                  transition: "color 0.15s",
+                  transition: "all 0.15s",
                   fontFamily: "Inter, sans-serif",
+                  whiteSpace: "nowrap",
+                  flexShrink: 0,
                 }}
               >
                 {c}
@@ -89,6 +90,11 @@ export default function News() {
           </div>
         </div>
       </section>
+
+      <style>{`
+        .category-tabs::-webkit-scrollbar { display: none; }
+        .category-tabs { -ms-overflow-style: none; scrollbar-width: none; }
+      `}</style>
     </>
   );
 }

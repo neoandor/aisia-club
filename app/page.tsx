@@ -147,23 +147,24 @@ export default function Home() {
             Latest News
           </h2>
           {/* Category tabs */}
-          <div style={{ display: "flex", gap: "0.1rem", flexWrap: "wrap", marginBottom: "2rem", borderBottom: "1px solid #E5E5E0", paddingBottom: "0.75rem" }}>
+          <div className="category-tabs" style={{ display: "flex", gap: "0.5rem", marginBottom: "2rem", overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none", paddingBottom: 4 }}>
             {allCategories.map((c) => (
               <button
                 key={c}
                 onClick={() => setActiveTab(c)}
                 style={{
-                  background: "transparent",
-                  border: "none",
-                  borderBottom: activeTab === c ? "2px solid #1A1A1A" : "2px solid transparent",
-                  marginBottom: "-0.75rem",
-                  padding: "0.45rem 0.9rem",
-                  fontSize: "0.88rem",
-                  fontWeight: activeTab === c ? 600 : 400,
-                  color: activeTab === c ? "#1A1A1A" : "#6B6B6B",
+                  background: activeTab === c ? "#1A1A1A" : "transparent",
+                  color: activeTab === c ? "#FFFFFF" : "#6B6B6B",
+                  border: activeTab === c ? "none" : "1px solid #D5D5D0",
+                  borderRadius: 999,
+                  padding: "0.4rem 1rem",
+                  fontSize: "0.82rem",
+                  fontWeight: activeTab === c ? 600 : 500,
                   cursor: "pointer",
                   fontFamily: "'Inter', system-ui, sans-serif",
-                  transition: "color 0.15s",
+                  transition: "all 0.15s",
+                  whiteSpace: "nowrap",
+                  flexShrink: 0,
                 }}
               >
                 {c}
