@@ -74,7 +74,7 @@ export default function Home() {
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           <Link href={`/news/${heroArticle.slug}`} style={{ textDecoration: "none", color: "inherit" }}>
           <div
-            className="card"
+            className="card featured-card"
             style={{
               display: "grid",
               gridTemplateColumns: "1fr 1.3fr",
@@ -86,6 +86,7 @@ export default function Home() {
           >
             {/* Hero image */}
             <div
+              className="featured-img"
               style={{
                 background: "#1A1A1A",
                 minHeight: 320,
@@ -95,7 +96,7 @@ export default function Home() {
               }}
             />
             {/* Content */}
-            <div style={{ padding: "40px 40px" }}>
+            <div className="featured-content" style={{ padding: "40px 40px" }}>
               <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 16 }}>
                 <span className="pill">{heroArticle.category}</span>
                 <span className="pill">Editor&apos;s Pick</span>
@@ -126,6 +127,11 @@ export default function Home() {
         <style>{`
           @media (max-width: 640px) {
             .featured-grid { grid-template-columns: 1fr !important; }
+          }
+          @media (max-width: 768px) {
+            .featured-card { grid-template-columns: 1fr !important; }
+            .featured-img { min-height: 220px !important; }
+            .featured-content { padding: 24px 20px !important; }
           }
         `}</style>
       </section>
