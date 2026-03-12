@@ -22,28 +22,28 @@ export default function News() {
   return (
     <>
       {/* Header */}
-      <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
-        <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-          AI News for <span style={{ color: "#D4845A" }}>Southeast Asia</span>
+      <section style={{ background: "#F5F0EB", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E5E0" }}>
+        <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#1A1A1A", margin: "0 0 0.75rem" }}>
+          AI News for <span style={{ color: "#1A1A1A" }}>Southeast Asia</span>
         </h1>
-        <p style={{ color: "#6B7280", fontSize: "1rem", margin: 0 }}>
+        <p style={{ color: "#6B6B6B", fontSize: "1rem", margin: 0 }}>
           Original reporting, regional lens. No hype.
         </p>
       </section>
 
-      <section style={{ padding: "40px 1.5rem 80px", background: "#FAFAF7" }}>
+      <section style={{ padding: "40px 1.5rem 80px", background: "#F5F0EB" }}>
         <div style={{ maxWidth: 1280, margin: "0 auto" }}>
           {/* Category Tabs */}
-          <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "2rem", borderBottom: "2px solid #E5E7EB", paddingBottom: "0.75rem" }}>
+          <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap", marginBottom: "2rem", borderBottom: "2px solid #E5E5E0", paddingBottom: "0.75rem" }}>
             {categories.map((c) => (
               <button
                 key={c}
                 onClick={() => setActive(c)}
                 style={{
                   background: "transparent",
-                  color: active === c ? "#D4845A" : "#6B7280",
+                  color: active === c ? "#1A1A1A" : "#6B6B6B",
                   border: "none",
-                  borderBottom: active === c ? "2px solid #D4845A" : "2px solid transparent",
+                  borderBottom: active === c ? "2px solid #1A1A1A" : "2px solid transparent",
                   marginBottom: "-0.75rem",
                   padding: "0.45rem 0.9rem",
                   fontSize: "0.88rem",
@@ -67,13 +67,13 @@ export default function News() {
                   <span className="pill-violet">{a.cat}</span>
                   {a.editorsPick && <span className="pill-coral">Editor&apos;s Pick</span>}
                 </div>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#2D2D3A", margin: "0 0 8px", lineHeight: 1.35 }}>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 8px", lineHeight: 1.35 }}>
                   {a.title}
                 </h3>
-                <p style={{ color: "#6B7280", fontSize: "0.88rem", lineHeight: 1.65, margin: "0 0 16px" }}>
+                <p style={{ color: "#6B6B6B", fontSize: "0.88rem", lineHeight: 1.65, margin: "0 0 16px" }}>
                   {a.excerpt}
                 </p>
-                <div style={{ color: "#9CA3AF", fontSize: "0.78rem", display: "flex", gap: 8 }}>
+                <div style={{ color: "#9B9B9B", fontSize: "0.78rem", display: "flex", gap: 8 }}>
                   <span>{a.author}</span>
                   <span>·</span>
                   <span>{a.date}</span>

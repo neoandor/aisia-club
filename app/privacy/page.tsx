@@ -7,12 +7,12 @@ export const metadata: Metadata = {
 
 export default function Privacy() {
   return (
-    <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 80px" }}>
+    <section style={{ background: "#F5F0EB", padding: "56px 1.5rem 80px" }}>
       <div className="container-article">
-        <h1 style={{ fontSize: "2rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "0.5rem" }}>
+        <h1 style={{ fontSize: "2rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "0.5rem" }}>
           Privacy Policy
         </h1>
-        <p style={{ color: "#9CA3AF", fontSize: "0.88rem", marginBottom: "3rem" }}>Last updated: January 2026</p>
+        <p style={{ color: "#9B9B9B", fontSize: "0.88rem", marginBottom: "3rem" }}>Last updated: January 2026</p>
 
         {[
           {
@@ -49,8 +49,8 @@ export default function Privacy() {
           },
         ].map((s) => (
           <div key={s.title} style={{ marginBottom: "2.5rem" }}>
-            <h2 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "0.6rem" }}>{s.title}</h2>
-            <p className="article-body" style={{ color: "#6B7280", lineHeight: 1.75, margin: 0 }}>{s.body}</p>
+            <h2 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "0.6rem" }}>{s.title}</h2>
+            <p className="article-body" style={{ color: "#6B6B6B", lineHeight: 1.75, margin: 0 }}>{s.body}</p>
           </div>
         ))}
       </div>

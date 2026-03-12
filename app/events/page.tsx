@@ -39,21 +39,21 @@ export default function Events() {
   return (
     <>
       {/* Header */}
-      <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
+      <section style={{ background: "#F5F0EB", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E5E0" }}>
         <div style={{ maxWidth: 640, margin: "0 auto" }}>
-          <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 0.75rem" }}>
-            AISIA <span style={{ color: "#D4845A" }}>Events</span>
+          <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#1A1A1A", margin: "0 0 0.75rem" }}>
+            AISIA <span style={{ color: "#1A1A1A" }}>Events</span>
           </h1>
-          <p style={{ color: "#6B7280", fontSize: "1.05rem", lineHeight: 1.7, margin: 0 }}>
+          <p style={{ color: "#6B6B6B", fontSize: "1.05rem", lineHeight: 1.7, margin: 0 }}>
             Meetups, workshops, and fireside chats — bringing the AI community together across Malaysia.
           </p>
         </div>
       </section>
 
       {/* Events list */}
-      <section className="section-pad" style={{ background: "#FAFAF7" }}>
+      <section className="section-pad" style={{ background: "#F5F0EB" }}>
         <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 1.5rem" }}>
-          <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "1.75rem" }}>
+          <h2 style={{ fontSize: "1.25rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "1.75rem" }}>
             Upcoming Events
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
@@ -63,7 +63,7 @@ export default function Events() {
                 <div style={{
                   minWidth: 64,
                   height: 64,
-                  background: "#D4845A",
+                  background: "#1A1A1A",
                   borderRadius: "50%",
                   display: "flex",
                   flexDirection: "column",
@@ -79,11 +79,11 @@ export default function Events() {
                   <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 8, flexWrap: "wrap" }}>
                     <span className="pill-violet">{ev.tag}</span>
                   </div>
-                  <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#2D2D3A", margin: "0 0 6px" }}>{ev.title}</h3>
-                  <div style={{ color: "#9CA3AF", fontSize: "0.82rem", marginBottom: 10 }}>
+                  <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 6px" }}>{ev.title}</h3>
+                  <div style={{ color: "#9B9B9B", fontSize: "0.82rem", marginBottom: 10 }}>
                     📌 {ev.location}
                   </div>
-                  <p style={{ color: "#6B7280", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>{ev.desc}</p>
+                  <p style={{ color: "#6B6B6B", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>{ev.desc}</p>
                 </div>
               </div>
             ))}
@@ -92,12 +92,12 @@ export default function Events() {
       </section>
 
       {/* Suggest / Host CTA */}
-      <section style={{ background: "#F3F0FF", padding: "80px 1.5rem", textAlign: "center" }}>
+      <section style={{ background: "#F5F0EB", padding: "80px 1.5rem", textAlign: "center" }}>
         <div style={{ maxWidth: 560, margin: "0 auto" }}>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "0.75rem" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "0.75rem" }}>
             Want to host an event?
           </h2>
-          <p style={{ color: "#6B7280", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+          <p style={{ color: "#6B6B6B", lineHeight: 1.7, marginBottom: "1.5rem" }}>
             We welcome community-led workshops, talks, and meetups. Get in touch and we&apos;ll help you make it happen.
           </p>
           <a href="mailto:hello@aisiaclub.com" className="btn-violet">

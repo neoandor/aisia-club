@@ -1,18 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,500;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 :root {
-  --bg: #FAFAF7;
+  --bg: #F5F0EB;
   --card: #FFFFFF;
-  --violet: #1A1A1A;
-  --terra: #D4845A;
-  --coral: #FF6B6B;
-  --text: #2D2D3A;
-  --muted: #6B7280;
-  --border: #E5E7EB;
+  --text: #1A1A1A;
+  --muted: #6B6B6B;
+  --border: #E5E5E0;
   --card-shadow: rgba(0,0,0,0.04);
-  --dark: #1A1A2E;
-  --violet-light: #F5F0EC;
 }
 
 * {
@@ -26,7 +21,7 @@ html {
 body {
   background-color: var(--bg);
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   margin: 0;
   font-size: 18px;
   line-height: 1.6;
@@ -38,17 +33,11 @@ body {
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Inter', sans-serif;
+h1, h2, h3, h4 {
+  font-family: 'Source Serif 4', Georgia, serif;
   font-weight: 700;
   line-height: 1.2;
   color: var(--text);
-}
-
-.article-body {
-  font-family: 'Source Serif 4', Georgia, serif;
-  font-size: 18px;
-  line-height: 1.6;
 }
 
 a {
@@ -56,74 +45,75 @@ a {
   text-decoration: none;
 }
 
-/* Utility classes */
-.violet { color: var(--violet); }
-.coral { color: var(--coral); }
-.muted { color: var(--muted); }
-
 .card {
   background: var(--card);
   border: 1px solid var(--border);
-  border-radius: 12px;
+  border-radius: 14px;
   box-shadow: 0 1px 4px var(--card-shadow);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
 }
 
-.btn-violet {
-  background: var(--violet);
+.btn-primary {
+  display: inline-block;
+  background: #1A1A1A;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  padding: 0.6rem 1.25rem;
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
+  border-radius: 999px;
+  padding: 0.7rem 1.75rem;
   font-size: 0.95rem;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
   cursor: pointer;
-  transition: background 0.15s ease, transform 0.1s ease;
+  transition: opacity 0.15s;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  opacity: 0.8;
+}
+
+.btn-outline {
   display: inline-block;
-}
-
-.btn-violet:hover {
-  background: #D4845A;
-  transform: translateY(-1px);
-}
-
-.pill-violet {
-  background: var(--violet);
-  color: #fff;
-  font-size: 0.72rem;
+  background: transparent;
+  color: #1A1A1A;
+  border: 1px solid #1A1A1A;
+  border-radius: 999px;
+  padding: 0.7rem 1.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.2rem 0.65rem;
-  border-radius: 99px;
-  font-family: 'Inter', sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  text-decoration: none;
 }
 
-.pill-coral {
-  background: var(--coral);
+.btn-outline:hover {
+  background: #1A1A1A;
   color: #fff;
-  font-size: 0.72rem;
+}
+
+/* legacy compat */
+.btn-violet {
+  display: inline-block;
+  background: #1A1A1A;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 0.7rem 1.75rem;
+  font-size: 0.95rem;
   font-weight: 600;
-  padding: 0.2rem 0.65rem;
-  border-radius: 99px;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  text-decoration: none;
 }
 
-.section-pad {
-  padding: 80px 0;
-}
-
-@media (max-width: 768px) {
-  .section-pad {
-    padding: 48px 0;
-  }
-}
+.btn-violet:hover { opacity: 0.8; }
 
 .container {
   max-width: 1280px;
@@ -136,3 +126,23 @@ a {
   margin: 0 auto;
   padding: 0 1.5rem;
 }
+
+.section-pad {
+  padding: 80px 1.5rem;
+}
+
+.pill {
+  display: inline-block;
+  background: #F0EDE8;
+  color: #6B6B6B;
+  border-radius: 999px;
+  padding: 0.2rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Legacy pill classes — now monochrome */
+.pill-violet { display: inline-block; background: #F0EDE8; color: #6B6B6B; border-radius: 999px; padding: 0.2rem 0.75rem; font-size: 0.75rem; font-weight: 600; font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.03em; }
+.pill-coral { display: inline-block; background: #F0EDE8; color: #6B6B6B; border-radius: 999px; padding: 0.2rem 0.75rem; font-size: 0.75rem; font-weight: 600; font-family: 'Inter', system-ui, sans-serif; letter-spacing: 0.03em; }

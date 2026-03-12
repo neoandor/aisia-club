@@ -17,7 +17,7 @@ export default function Navbar() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handler = () => setScrolled(window.scrollY > 40);
+    const handler = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", handler);
     return () => window.removeEventListener("scroll", handler);
   }, []);
@@ -25,13 +25,12 @@ export default function Navbar() {
   return (
     <nav
       style={{
-        background: "#FFFFFF",
-        borderBottom: "1px solid #E5E7EB",
+        background: "#F5F0EB",
         position: "sticky",
         top: 0,
         zIndex: 50,
         transition: "box-shadow 0.2s",
-        boxShadow: scrolled ? "0 2px 12px rgba(0,0,0,0.06)" : "none",
+        boxShadow: scrolled ? "0 1px 12px rgba(0,0,0,0.06)" : "none",
       }}
     >
       <div
@@ -42,46 +41,79 @@ export default function Navbar() {
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
-          height: scrolled ? 56 : 64,
-          transition: "height 0.2s",
+          height: 80,
         }}
       >
         {/* Logo */}
         <Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center" }}>
-          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 72 }} />
+          <img src="/aisia-logo.svg" alt="aisia.club" style={{ height: 144 }} />
         </Link>
 
         {/* Nav links — desktop */}
-        <div style={{ display: "flex", alignItems: "center", gap: "0.25rem" }}
-          className="desktop-nav">
+        <div style={{ display: "flex", alignItems: "center", gap: "0.1rem" }} className="desktop-nav">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               style={{
-                padding: "0.4rem 0.75rem",
-                borderRadius: 6,
-                fontFamily: "Inter, sans-serif",
+                padding: "0.4rem 0.9rem",
+                fontFamily: "'Inter', system-ui, sans-serif",
                 fontSize: "0.9rem",
                 fontWeight: 500,
-                color: pathname === l.href ? "#1A1A1A" : "#2D2D3A",
-                borderBottom: pathname === l.href ? "2px solid #1A1A1A" : "2px solid transparent",
-                transition: "color 0.15s",
+                color: pathname === l.href ? "#1A1A1A" : "#6B6B6B",
+                opacity: pathname === l.href ? 1 : 1,
                 textDecoration: "none",
+                transition: "color 0.15s",
+              }}
+              onMouseOver={(e) => (e.currentTarget.style.color = "#1A1A1A")}
+              onMouseOut={(e) => {
+                if (pathname !== l.href) e.currentTarget.style.color = "#6B6B6B";
               }}
             >
               {l.label}
             </Link>
           ))}
-          <Link href="/community" className="btn-violet" style={{ marginLeft: "0.75rem", whiteSpace: "nowrap" }}>
-            Join AISIA →
+          <Link
+            href="/community"
+            style={{
+              marginLeft: "1rem",
+              display: "inline-block",
+              background: "#1A1A1A",
+              color: "#fff",
+              border: "none",
+              borderRadius: 999,
+              padding: "0.5rem 1.25rem",
+              fontSize: "0.88rem",
+              fontWeight: 600,
+              fontFamily: "'Inter', system-ui, sans-serif",
+              textDecoration: "none",
+              whiteSpace: "nowrap",
+              transition: "opacity 0.15s",
+            }}
+            onMouseOver={(e) => (e.currentTarget.style.opacity = "0.75")}
+            onMouseOut={(e) => (e.currentTarget.style.opacity = "1")}
+          >
+            Join AISIA
           </Link>
         </div>
 
-        {/* Mobile: always show Join button + hamburger */}
-        <div className="mobile-nav" style={{ display: "none", alignItems: "center", gap: "0.75rem" }}>
-          <Link href="/community" className="btn-violet" style={{ fontSize: "0.82rem", padding: "0.45rem 1rem" }}>
-            Join AISIA →
+        {/* Mobile */}
+        <div className="mobile-nav" style={{ display: "none", alignItems: "center" }}>
+          <Link
+            href="/community"
+            style={{
+              display: "inline-block",
+              background: "#1A1A1A",
+              color: "#fff",
+              borderRadius: 999,
+              padding: "0.45rem 1rem",
+              fontSize: "0.82rem",
+              fontWeight: 600,
+              fontFamily: "'Inter', system-ui, sans-serif",
+              textDecoration: "none",
+            }}
+          >
+            Join AISIA
           </Link>
         </div>
       </div>

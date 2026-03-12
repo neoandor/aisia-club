@@ -9,12 +9,12 @@ export default function About() {
   return (
     <>
       {/* Hero */}
-      <section style={{ background: "#FAFAF7", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E7EB" }}>
+      <section style={{ background: "#F5F0EB", padding: "56px 1.5rem 40px", textAlign: "center", borderBottom: "1px solid #E5E5E0" }}>
         <div style={{ maxWidth: 700, margin: "0 auto" }}>
-          <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#2D2D3A", margin: "0 0 1rem" }}>
-            About <span style={{ color: "#D4845A" }}>AISIA Club</span>
+          <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#1A1A1A", margin: "0 0 1rem" }}>
+            About <span style={{ color: "#1A1A1A" }}>AISIA Club</span>
           </h1>
-          <p style={{ color: "#6B7280", fontSize: "1.1rem", lineHeight: 1.7, margin: 0 }}>
+          <p style={{ color: "#6B6B6B", fontSize: "1.1rem", lineHeight: 1.7, margin: 0 }}>
             Southeast Asia&apos;s open community for anyone curious about artificial intelligence.
           </p>
         </div>
@@ -23,26 +23,26 @@ export default function About() {
       {/* Who We Are */}
       <section className="section-pad" style={{ background: "#FFFFFF" }}>
         <div className="container-article">
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "1.25rem" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "1.25rem" }}>
             Who We Are
           </h2>
-          <p style={{ color: "#6B7280", fontSize: "1.05rem", lineHeight: 1.8, borderLeft: "3px solid #D4845A", paddingLeft: "1.25rem", margin: "0 0 2rem" }}>
+          <p style={{ color: "#6B6B6B", fontSize: "1.05rem", lineHeight: 1.8, borderLeft: "3px solid #1A1A1A", paddingLeft: "1.25rem", margin: "0 0 2rem" }}>
             AISIA Club is Southeast Asia&apos;s open community for anyone curious about artificial intelligence.
             From first-time explorers to seasoned practitioners, we publish original reporting, curate the most
             relevant AI developments through a regional lens, and connect builders across Malaysia and beyond.
           </p>
-          <div style={{ background: "#F5F0EC", borderRadius: 12, padding: "1.25rem 1.5rem", border: "1px solid #E5E7EB" }}>
-            <p style={{ color: "#6B7280", margin: 0, fontSize: "0.95rem", lineHeight: 1.8 }}>
-              📍 Founded: <span style={{ fontWeight: 600, color: "#2D2D3A" }}>2026</span> &nbsp;|&nbsp;
-              📌 HQ: <span style={{ fontWeight: 600, color: "#2D2D3A" }}>Kuala Lumpur, Malaysia</span> &nbsp;|&nbsp;
-              🌏 Focus: <span style={{ fontWeight: 600, color: "#2D2D3A" }}>Malaysia &amp; SEA</span>
+          <div style={{ background: "#F5F0EB", borderRadius: 12, padding: "1.25rem 1.5rem", border: "1px solid #E5E5E0" }}>
+            <p style={{ color: "#6B6B6B", margin: 0, fontSize: "0.95rem", lineHeight: 1.8 }}>
+              📍 Founded: <span style={{ fontWeight: 600, color: "#1A1A1A" }}>2026</span> &nbsp;|&nbsp;
+              📌 HQ: <span style={{ fontWeight: 600, color: "#1A1A1A" }}>Kuala Lumpur, Malaysia</span> &nbsp;|&nbsp;
+              🌏 Focus: <span style={{ fontWeight: 600, color: "#1A1A1A" }}>Malaysia &amp; SEA</span>
             </p>
           </div>
         </div>
       </section>
 
       {/* Stats */}
-      <section style={{ background: "#FAFAF7", padding: "48px 1.5rem" }}>
+      <section style={{ background: "#F5F0EB", padding: "48px 1.5rem" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))", gap: 24, textAlign: "center" }}>
             {[
@@ -52,8 +52,8 @@ export default function About() {
               { num: "6+", label: "Countries" },
             ].map((s) => (
               <div key={s.label} className="card" style={{ padding: 24 }}>
-                <div style={{ fontSize: "2rem", fontWeight: 700, color: "#D4845A" }}>{s.num}</div>
-                <div style={{ color: "#6B7280", fontSize: "0.9rem", marginTop: 4 }}>{s.label}</div>
+                <div style={{ fontSize: "2rem", fontWeight: 700, color: "#1A1A1A" }}>{s.num}</div>
+                <div style={{ color: "#6B6B6B", fontSize: "0.9rem", marginTop: 4 }}>{s.label}</div>
               </div>
             ))}
           </div>
@@ -63,7 +63,7 @@ export default function About() {
       {/* Why AISIA */}
       <section className="section-pad" style={{ background: "#FFFFFF" }}>
         <div className="container">
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "2rem", textAlign: "center" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "2rem", textAlign: "center" }}>
             Why AISIA Exists
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 24 }}>
@@ -74,8 +74,8 @@ export default function About() {
               { num: "04", text: "We fill that gap. AISIA brings original reporting + a real community — grounded in Malaysian and SEA context." },
             ].map((r) => (
               <div key={r.num} className="card" style={{ padding: 24 }}>
-                <div style={{ color: "#D4845A", fontSize: "1.75rem", fontWeight: 800, marginBottom: "0.75rem", opacity: 0.6 }}>{r.num}</div>
-                <p style={{ color: "#6B7280", lineHeight: 1.65, margin: 0 }}>{r.text}</p>
+                <div style={{ color: "#1A1A1A", fontSize: "1.75rem", fontWeight: 800, marginBottom: "0.75rem", opacity: 0.6 }}>{r.num}</div>
+                <p style={{ color: "#6B6B6B", lineHeight: 1.65, margin: 0 }}>{r.text}</p>
               </div>
             ))}
           </div>
@@ -83,9 +83,9 @@ export default function About() {
       </section>
 
       {/* What We Do */}
-      <section className="section-pad" style={{ background: "#FAFAF7" }}>
+      <section className="section-pad" style={{ background: "#F5F0EB" }}>
         <div className="container">
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#2D2D3A", marginBottom: "2rem", textAlign: "center" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "2rem", textAlign: "center" }}>
             What We Do
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 24 }}>
@@ -97,8 +97,8 @@ export default function About() {
             ].map((w) => (
               <div key={w.title} className="card" style={{ padding: 24, textAlign: "center" }}>
                 <div style={{ fontSize: "2rem", marginBottom: "0.75rem" }}>{w.icon}</div>
-                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#D4845A", margin: "0 0 0.5rem" }}>{w.title}</h3>
-                <p style={{ color: "#6B7280", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{w.desc}</p>
+                <h3 style={{ fontSize: "1.05rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 0.5rem" }}>{w.title}</h3>
+                <p style={{ color: "#6B6B6B", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{w.desc}</p>
               </div>
             ))}
           </div>
