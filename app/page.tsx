@@ -84,18 +84,16 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            {/* Image placeholder */}
+            {/* Hero image */}
             <div
               style={{
                 background: "#1A1A1A",
                 minHeight: 320,
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
+                backgroundImage: "url(/article-hero-roadmap.jpg)",
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
-            >
-              <span style={{ fontSize: "3rem", opacity: 0.3 }}>🏛️</span>
-            </div>
+            />
             {/* Content */}
             <div style={{ padding: "40px 40px" }}>
               <div style={{ display: "flex", gap: 8, alignItems: "center", marginBottom: 16 }}>

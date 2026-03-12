@@ -53,10 +53,17 @@ export default function ArticleClient({ slug, fallback }: Props) {
   const author = "author" in article ? article.author : "AISIA Editorial";
   const readTime = "readTime" in article ? article.readTime : ("read_time" in article ? (article as DbArticle).read_time : "5 min read");
   const editorsPick = "editorsPick" in article ? article.editorsPick : ("editors_pick" in article ? (article as DbArticle).editors_pick : false);
+  const imageUrl = "image_url" in article ? (article as DbArticle).image_url : ("image" in article ? (article as unknown as {image?: string}).image : null);
 
   return (
     <article style={{ background: "#F5F0EB", minHeight: "100vh" }}>
-      <header style={{ padding: "60px 1.5rem 40px", maxWidth: 720, margin: "0 auto" }}>
+      {/* Hero image */}
+      {imageUrl && (
+        <div style={{ maxWidth: 960, margin: "0 auto", padding: "24px 1.5rem 0" }}>
+          <img src={imageUrl} alt={title} style={{ width: "100%", height: "auto", borderRadius: 12, display: "block" }} />
+        </div>
+      )}
+      <header style={{ padding: "40px 1.5rem 40px", maxWidth: 720, margin: "0 auto" }}>
         <div style={{ marginBottom: 16, display: "flex", gap: 8 }}>
           <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "#6B6B6B", background: "#FFFFFF", border: "1px solid #E5E5E0", borderRadius: 999, padding: "4px 12px" }}>
             {category}
