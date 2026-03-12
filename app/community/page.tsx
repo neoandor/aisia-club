@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Community — AISIA Club",
-  description: "Join Malaysia's most active AI community. Connect on WhatsApp, Telegram, and LinkedIn.",
+  description: "Join Malaysia's most active AI community on Telegram. Forum-style discussions, AI news, jobs, and more.",
 };
 
 export default function Community() {
@@ -14,65 +14,136 @@ export default function Community() {
           <h1 style={{ fontSize: "clamp(1.75rem, 4vw, 2.5rem)", fontWeight: 700, color: "#1A1A1A", margin: "0 0 0.75rem" }}>
             The AISIA <span style={{ color: "#1A1A1A" }}>Community</span>
           </h1>
-          <p style={{ color: "#6B6B6B", fontSize: "1.05rem", lineHeight: 1.7, margin: 0 }}>
-            500+ members strong. Practitioners, founders, students, and AI enthusiasts from across Malaysia and Southeast Asia.
+          <p style={{ color: "#6B6B6B", fontSize: "1.05rem", lineHeight: 1.7, margin: "0 0 1.5rem" }}>
+            Malaysia&apos;s home for AI practitioners, founders, students, and enthusiasts. Join the conversation on Telegram.
           </p>
+          <a
+            href="https://t.me/aisiaclub"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "14px 32px",
+              background: "#1A1A1A",
+              color: "#fff",
+              borderRadius: 999,
+              fontSize: "1rem",
+              fontWeight: 700,
+              fontFamily: "'Inter', system-ui, sans-serif",
+              textDecoration: "none",
+              transition: "opacity 0.15s",
+            }}
+          >
+            <span style={{ fontSize: "1.3rem" }}>✈️</span>
+            Join AISIA on Telegram
+          </a>
         </div>
       </section>
 
-      {/* Activity strip */}
-      <section style={{ background: "#F5F0EB", borderBottom: "1px solid #E5E5E0" }}>
-        <div className="container" style={{ padding: "16px 1.5rem" }}>
-          <div style={{ display: "flex", gap: "2rem", justifyContent: "center", flexWrap: "wrap", alignItems: "center" }}>
-            {[
-              { dot: "#22C55E", text: "🟢 Active community — 50+ messages today" },
-              { dot: "#1A1A1A", text: "🎉 New members joined this week" },
-            ].map((s) => (
-              <span key={s.text} style={{ color: "#6B6B6B", fontSize: "0.88rem" }}>{s.text}</span>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Channels */}
+      {/* Telegram Forum Topics */}
       <section className="section-pad" style={{ background: "#FFFFFF" }}>
         <div className="container">
-          <h2 style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "2rem" }}>
-            Join Us Where You Are
-          </h2>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 24 }}>
+          <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
+            <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: 8 }}>
+              Forum-Style Discussions
+            </h2>
+            <p style={{ color: "#6B6B6B", fontSize: "0.95rem", maxWidth: 520, margin: "0 auto" }}>
+              Our Telegram group uses Topics — organised channels for different conversations, like a modern forum inside your favourite chat app.
+            </p>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: 16, maxWidth: 900, margin: "0 auto" }}>
             {[
-              { icon: "✈️", name: "Telegram", desc: "Daily AI news, discussions, and announcements. The fastest-moving channel.", href: "#", cta: "Join Telegram →" },
-              { icon: "📱", name: "WhatsApp", desc: "A curated weekly digest and community Q&A for those who prefer WhatsApp.", href: "#", cta: "Join WhatsApp →" },
-              { icon: "💼", name: "LinkedIn", desc: "Professional updates, job opportunities, and thought leadership from AISIA members.", href: "#", cta: "Follow on LinkedIn →" },
-            ].map((ch) => (
-              <div key={ch.name} className="card" style={{ padding: 24, textAlign: "center" }}>
-                <div style={{ fontSize: "2.5rem", marginBottom: 12 }}>{ch.icon}</div>
-                <h3 style={{ fontSize: "1.1rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 8px" }}>{ch.name}</h3>
-                <p style={{ color: "#6B6B6B", fontSize: "0.9rem", lineHeight: 1.65, marginBottom: 20 }}>{ch.desc}</p>
-                <a
-                  href={ch.href}
-                  style={{
-                    display: "inline-block",
-                    padding: "0.55rem 1.25rem",
-                    borderRadius: 8,
-                    border: "1.5px solid #1A1A1A",
-                    color: "#1A1A1A",
-                    fontWeight: 600,
-                    fontSize: "0.9rem",
-                    fontFamily: "Inter, sans-serif",
-                    transition: "all 0.15s",
-                  }}
-                >
-                  {ch.cta}
-                </a>
+              { icon: "💬", topic: "General", desc: "Open chat — introductions, random AI thoughts, community vibes" },
+              { icon: "🔧", topic: "AI Tools & Reviews", desc: "Share and discuss tools you're using — ChatGPT, Canva AI, Copilot, local tools" },
+              { icon: "❓", topic: "Ask Anything", desc: "No stupid questions. Get help from the community on AI topics, career, tech" },
+              { icon: "📰", topic: "News & Articles", desc: "Discuss AISIA articles, share external news, debate AI developments" },
+              { icon: "💼", topic: "Jobs & Hiring", desc: "Post AI job openings, freelance gigs, and career opportunities in Malaysia & SEA" },
+              { icon: "🚀", topic: "Projects & Showcase", desc: "Show what you're building — get feedback, find collaborators, launch together" },
+              { icon: "📚", topic: "Learning & Resources", desc: "Courses, tutorials, papers, and study groups for levelling up your AI skills" },
+              { icon: "🗳️", topic: "Weekly Discussion", desc: "Curated weekly topic — community polls, debates, and themed conversations" },
+            ].map((t) => (
+              <div key={t.topic} style={{
+                border: "1px solid #E5E5E0",
+                borderRadius: 12,
+                padding: "20px 24px",
+                display: "flex",
+                gap: 16,
+                alignItems: "flex-start",
+                transition: "box-shadow 0.15s",
+              }}>
+                <span style={{ fontSize: "1.5rem", flexShrink: 0, marginTop: 2 }}>{t.icon}</span>
+                <div>
+                  <h3 style={{ fontSize: "0.95rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 4px" }}>#{t.topic}</h3>
+                  <p style={{ color: "#6B6B6B", fontSize: "0.82rem", lineHeight: 1.55, margin: 0 }}>{t.desc}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Benefits */}
+      {/* How It Works */}
+      <section className="section-pad" style={{ background: "#F5F0EB" }}>
+        <div className="container">
+          <h2 style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "2rem" }}>
+            How It Works
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 32, maxWidth: 800, margin: "0 auto" }}>
+            {[
+              { step: "1", title: "Join the Group", desc: "Click the Telegram link — you're in. No forms, no signups, no approval needed." },
+              { step: "2", title: "Browse Topics", desc: "Find the topic that interests you. Each one is a focused thread — like a mini-forum." },
+              { step: "3", title: "Start Talking", desc: "Ask questions, share insights, post your projects. The community is here to help." },
+            ].map((s) => (
+              <div key={s.step} style={{ textAlign: "center" }}>
+                <div style={{
+                  width: 48, height: 48, borderRadius: "50%", background: "#1A1A1A", color: "#fff",
+                  display: "flex", alignItems: "center", justifyContent: "center",
+                  fontSize: "1.1rem", fontWeight: 700, margin: "0 auto 16px",
+                  fontFamily: "'Inter', system-ui, sans-serif",
+                }}>{s.step}</div>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 8px" }}>{s.title}</h3>
+                <p style={{ color: "#6B6B6B", fontSize: "0.875rem", lineHeight: 1.6, margin: 0 }}>{s.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Also on */}
+      <section className="section-pad" style={{ background: "#FFFFFF" }}>
+        <div className="container">
+          <h2 style={{ textAlign: "center", fontSize: "1.25rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "1.5rem" }}>
+            Also Find Us On
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20, maxWidth: 700, margin: "0 auto" }}>
+            {[
+              { icon: "📱", name: "WhatsApp Community", desc: "Weekly digest and casual Q&A for those who live on WhatsApp.", href: "#", cta: "Join WhatsApp →" },
+              { icon: "💼", name: "LinkedIn", desc: "Professional updates, job postings, and thought leadership.", href: "#", cta: "Follow on LinkedIn →" },
+            ].map((ch) => (
+              <a key={ch.name} href={ch.href} target="_blank" rel="noopener noreferrer" style={{
+                border: "1px solid #E5E5E0",
+                borderRadius: 12,
+                padding: "24px",
+                textAlign: "center",
+                textDecoration: "none",
+                color: "inherit",
+                transition: "box-shadow 0.15s",
+                display: "block",
+              }}>
+                <div style={{ fontSize: "2rem", marginBottom: 8 }}>{ch.icon}</div>
+                <h3 style={{ fontSize: "1rem", fontWeight: 700, color: "#1A1A1A", margin: "0 0 6px" }}>{ch.name}</h3>
+                <p style={{ color: "#6B6B6B", fontSize: "0.85rem", lineHeight: 1.55, marginBottom: 12 }}>{ch.desc}</p>
+                <span style={{ color: "#1A1A1A", fontWeight: 600, fontSize: "0.88rem" }}>{ch.cta}</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Why Join */}
       <section className="section-pad" style={{ background: "#F5F0EB" }}>
         <div className="container">
           <h2 style={{ textAlign: "center", fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "2rem" }}>
@@ -95,18 +166,35 @@ export default function Community() {
         </div>
       </section>
 
-      {/* Coming Soon */}
-      <section style={{ background: "#F5F0EB", padding: "80px 1.5rem" }}>
-        <div style={{ maxWidth: 600, margin: "0 auto", textAlign: "center" }}>
-          <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>🚧</div>
-          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#1A1A1A", marginBottom: "0.75rem" }}>
-            Member Profiles &amp; Showcase — Coming Soon
+      {/* CTA */}
+      <section style={{ background: "#1A1A1A", padding: "64px 1.5rem", textAlign: "center" }}>
+        <div style={{ maxWidth: 600, margin: "0 auto" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, color: "#FFFFFF", marginBottom: "0.75rem", fontFamily: "'Source Serif 4', Georgia, serif" }}>
+            Ready to join the conversation?
           </h2>
-          <p style={{ color: "#6B6B6B", lineHeight: 1.7, marginBottom: "1.5rem" }}>
-            We&apos;re building a dedicated space for members to share projects, connect with peers, and showcase their AI work. Be among the first to know when it launches.
+          <p style={{ color: "#9B9B9B", lineHeight: 1.7, marginBottom: "1.5rem" }}>
+            Free forever. No spam. Just real conversations about AI in Malaysia and Southeast Asia.
           </p>
-          <a href="/community#channels" className="btn-violet">
-            Join the Community First →
+          <a
+            href="https://t.me/aisiaclub"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 10,
+              padding: "14px 32px",
+              background: "#FFFFFF",
+              color: "#1A1A1A",
+              borderRadius: 999,
+              fontSize: "1rem",
+              fontWeight: 700,
+              fontFamily: "'Inter', system-ui, sans-serif",
+              textDecoration: "none",
+            }}
+          >
+            <span style={{ fontSize: "1.3rem" }}>✈️</span>
+            Join AISIA on Telegram
           </a>
         </div>
       </section>
